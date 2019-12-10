@@ -5,6 +5,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+/**
+ * Index page
+ *
+ */
 @Controller
 public class HomeController {
     String message = "this is first message";
@@ -19,7 +23,7 @@ public class HomeController {
             @RequestParam(value = "name", required = false, defaultValue = "World") String name) {
         System.out.println("in controller");
 
-        ModelAndView mv = new ModelAndView("add-expense");
+        ModelAndView mv = new ModelAndView("edit-expense");
         mv.addObject("message", message);
         mv.addObject("name", name);
         return mv;
